@@ -1,0 +1,113 @@
+
+/*Strip the ul.custom-list of padding and list styling*/
+ul.custom-list {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+.custom-list li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+	border-bottom:1px #a9a9a9 solid;
+}
+
+/*Style for menu links*/
+.custom-list li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: left;
+	padding-left:30px;
+	line-height: 50px;
+	font-family: "Georgia", Georgia, Arial, sans-serif;
+	color: #7594b7;
+	font-size:18px;
+	background: #eee;
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/
+.custom-list li:hover {
+	border-bottom:none;
+	a{
+		background: #eee;
+		font-weight:600;
+	}
+}
+
+/*Style for dropdown links*/
+.custom-list li:hover ul a {
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+	font-weight:300;
+}
+
+/*Hover state for dropdown links*/
+.custom-list li:hover ul a:hover {
+	background: #a9a9a9;
+	color: #000;
+}
+
+/*Hide dropdown links until they are needed*/
+.custom-list li ul{
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+.custom-list li ul li {
+	display: block;
+	float: none;
+}
+
+
+/*Prevent text wrapping*/
+.custom-list li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul.custom-list li a:hover + .hidden, .hidden:hover {
+	transition:1s linear;
+	display: block;
+}
+.custom-list li 
+{	
+	a{
+		width:80%;
+	}
+	.expandable-menu-toggle{
+		margin-top:10px;
+		float:right;
+		background: url('../img/add-icon.png') no-repeat 0px 50%;
+		background-size: 20px;
+		width:20px;
+		height:20px;
+		cursor:pointer;
+	}
+}
+
+
+/*Make dropdown links appear inline*/
+ul.custom-list {
+	position: static;
+	height:280px;
+}
+/*Create vertical spacing*/
+.custom-list li {
+	margin-bottom: 1px;
+}
+/*Make all menu links ful.custom-listl width*/
+ul.custom-list li, li a {
+	width: 100%;
+}
+/*Display 'show menu' link*/
+.show-menu {
+	display:block;
+}
