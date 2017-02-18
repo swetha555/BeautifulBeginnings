@@ -1,45 +1,15 @@
-function clickedMenu() {
-        var x = document.getElementById("menu-items");
-        if (x.className === "menu-section") {
-            x.className += " responsive";
-        } else {
-            x.className = "menu-section";
-        }
-    }
+$(document).ready(function() {
+	var itemsSelected = 0;
 
-
-var itemsSelected = 0;
- 
-    function hasClass(el, className) {
-        if (el.classList)
-            return el.classList.contains(className)
-        else
-            return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
-    }
- 
-    function addClass(el, className) {
-        if (el.classList)
-            el.classList.add(className)
-        else if (!hasClass(el, className)) el.className += " " + className
-    }
- 
-    function removeClass(el, className) {
-        if (el.classList)
-            el.classList.remove(className)
-        else if (hasClass(el, className)) {
-            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
-            el.className = el.className.replace(reg, ' ')
-        }
-    }
- 
-    function adjustItemCount(element) {
-        // check if alreday selected, if selected remove
-        if (hasClass(element,'active')) {
-            removeClass(element,'active');
-            itemsSelected--;
-        }else{
-            addClass(element,'active');
-            itemsSelected++;
-        }
-        document.getElementById("items-selected").textContent = itemsSelected;
-    };
+	$("#navBar").load("partials/navBar.html");
+	$("#items-list").load("partials/items-list.html",function (argument) {
+		$(".item").click(function() {
+		itemsSelected++;
+		$(this).addClass("active");
+		$("#items-selected").text(itemsSelected);
+		$("#items-selected-xs").text(itemsSelected);
+	});
+	});
+	$("#footer").load("partials/footer.html");
+	
+});
