@@ -1,0 +1,43 @@
+<!-- Modal content-->
+    <div class="modal fade" id="cart-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">My Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th>Item</th>
+                              <th>Quantity</th>
+                            </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td><img src="img/item-1.png" class="img-responsive img-thumbnail cartItems" alt="Image" /></td>
+                              <td><input type="number" min="1" value="1"/></td>
+                        </tr>
+                        <tr>
+                        <td><img src="img/item-2.png" class="img-responsive img-thumbnail cartItems" alt="Image" />
+                        </td>
+                        <td><input type="number" min="0" value="2"/></td>
+                    </tr>
+                        <tr>
+                        <td><img src="img/item-3.png" class="img-responsive img-thumbnail cartItems" alt="Image" />
+                        </td>
+                        <td><input type="number" min="0" value="2"/></td>
+                    </tr>
+                        </tbody>
+                                            
+                    
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeCart">Close</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
