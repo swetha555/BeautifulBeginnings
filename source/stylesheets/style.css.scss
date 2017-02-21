@@ -1,19 +1,19 @@
-@charset: "utf-8";
+@charset "utf-8";
 
-@import "media-query.less";
-@import "bottom-section.less";
-@import "footer.less";
+@import "media-query";
+@import "bottom-section";
+@import "footer";
 
 @font-face {
     font-family: 'AlexBrush';
     src: url('../font/AlexBrush-Regular.ttf') format('eot');
 }
-@blue-color: #666666;
-@white: #fff;
+$blue-color: #666666;
+$white: #fff;
 .highlight-text {
     color: #7594b7;
 }
-.template-font {
+%template-font {
     font-family: AlexBrush;
     font-style: italic;
 }
@@ -31,7 +31,7 @@
     border-bottom: 1px #eee solid;
 }
 .jumbotron {
-    background-color: @white !important;
+    background-color: $white !important;
 }
 
 
@@ -74,7 +74,7 @@ a:hover {
 .logo-container {
     padding-top: 50px;
     div:first-child {
-        .template-font;
+        @extend %template-font;
         font-size: 1.4em;
         font-weight: 400;
     }
@@ -83,9 +83,9 @@ a:hover {
 
 .navbar-default,
 .navbar-header {
-    border: @white;
-    background-color: @white;
-    border-color: @white;
+    border: $white;
+    background-color: $white;
+    border-color: $white;
     width:100%;
     .shopping-icon {
         /*background: url("../img/shopping-cart.png") no-repeat;*/
@@ -114,7 +114,7 @@ a:hover {
 
 
 .main-container {
-    background: @white;
+    background: $white;
     padding: 0 30px;
     margin: 0 auto;
     border-left: 1px #eee solid;
@@ -165,7 +165,7 @@ a:hover {
         p:last-child {
             text-align: right;
             font-size: 1.3em;
-            .template-font;
+            @extend %template-font;
         }
     }
 }

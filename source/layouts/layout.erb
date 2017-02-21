@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Beautiful Beginings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= javascript_include_tag 'jquery.min' %>
+    <%= javascript_include_tag 'bootstrap.min' %>
+    <%= stylesheet_link_tag 'style' %>
+    <%= javascript_include_tag 'script' %>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+
+<%= partial 'partials/login' %>
+<%= partial 'partials/cart' %>
+</html>
