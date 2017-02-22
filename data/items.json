@@ -1,0 +1,22 @@
+{
+	"itemsList":[
+    { 
+    	"id": 1,
+    "name" : "Hazel Ruffle Top and Capri Set by Angel Dear",
+     "description" : "Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad.Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad." ,
+     "image" : "img/item-1.png",
+     "price" : "$49.00"     },
+    { 
+    	"id": 2,
+    "name" : "Alexis Crib with Rose Garland",
+     "description" : "Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad.Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad." ,
+     "image" : "img/item-2.png",
+     "price" : "$1,395.00"     },
+    { 
+    	"id": 3,
+    "name" : "Little G Plush Giraffe by Little Giraffe",
+     "description" : "Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad.Lorem ipsum dolor sit amet, eu ius erat commune, facer semper sea ad." ,
+     "image" : "img/item-3.png",
+     "price" : "$42.00"     }
+]
+}
