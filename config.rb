@@ -16,6 +16,19 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+data.items.itemsList.each do |item|
+  proxy "/items/#{item.id}.html", "template.html", 
+    :locals => { 
+      :item_id => item.id,
+      :item_name => item.name,
+      :item_description => item.description,
+      :item_price => item.price,
+      :item_image => item.image,
+    }, 
+    :ignore => true
+end
+
+
 # General configuration
 
 ###

@@ -9,9 +9,11 @@
         <div class="itemsList">
             <% data.items.itemsList.each do |item| %>
                <div class="col-sm-6 col-md-3 item">
-                <%= image_tag(item.image) %>
+                 <a href="/items/<%= item.id %>.html">
+                 <%= image_tag(item.image) %>
                     <p><%= item.name %></p>
                     <span><%= item.price %></span>
+                </a>
                 </div>
             <% end %>
          </div>
